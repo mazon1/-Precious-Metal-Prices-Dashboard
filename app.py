@@ -21,6 +21,10 @@ metal = st.sidebar.selectbox("Metal", data.columns[1:], index=0)
 start_date = st.sidebar.date_input("Start Date", min_value=data.DateTime.min().date(), max_value=data.DateTime.max().date(), value=data.DateTime.min().date())
 end_date = st.sidebar.date_input("End Date", min_value=data.DateTime.min().date(), max_value=data.DateTime.max().date(), value=data.DateTime.max().date())
 
+# Ensure that start_date and end_date are in datetime format
+start_date = pd.to_datetime(start_date)
+end_date = pd.to_datetime(end_date)
+
 filtered_data = data.loc[(data.DateTime >= start_date) & (data.DateTime <= end_date)]
 
 # Create a plotly plot
