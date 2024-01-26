@@ -31,6 +31,8 @@ This project relies on the following Python libraries:
 - NumPy: A library for performing numerical operations on data.
 - Streamlit: A web framework for serving the Dash app.
 
+  [Link to App](https://ypwrhwujlpkbuccggc5dqy.streamlit.app/)
+
 
 
 
